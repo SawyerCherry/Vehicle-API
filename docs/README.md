@@ -1,6 +1,8 @@
+Docsify Version of this readme: https://sawyercherry.github.io/Vehicle-API/#/
+
 # Vehicle API
 
-> The vehicle API is a API for storing Vehicle information such as Make, Model, Year, and VIN number of the Vehicle. 
+> The vehicle API is a RESTful API for storing Vehicle information such as Make, Model, Year, and VIN number of the Vehicle. 
 
 
 ### How To get Started
@@ -29,7 +31,7 @@
 
 
 ### Example
-* GET all vehicles /vehicles/all-vehicles
+* GET all vehicles http://localhost:3000/vehicles/all-vehicles
 ```
     {
         "allVehicles": [
