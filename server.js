@@ -35,7 +35,7 @@ app.get('/welcome', (req, res) => {
 const router = require("./routes/index.js");
 app.use(router);
 
+//Had to switch this for heroku
 // listen for requests
-app.listen(3000, () => {
-    console.log("Server is listening on port 3000");
-});
+var port = process.env.PORT || 3000;
+var server=app.listen(port,function(){})

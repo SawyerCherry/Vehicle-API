@@ -16,29 +16,3 @@ after((done) => {
   mongoose.connection.close();
   done();
 });
-describe("User API Tests", () => {
-  beforeEach((done) => {
-    const newUser = new User({
-      username: "newUser1",
-      password: "password",
-    });
-    newUser.save().then(() => {
-      done();
-    });
-  });
-
-  it("Should get all users", (done) => {
-    chai
-      .request(app)
-      .get("/users")
-      .end((err, res) => {
-        if (err) {
-          done(err);
-        } else {
-          expect(res).to.have.status(200);
-          expect(res.body.allUsers).to.be.an.an("array");
-          done();
-        }
-      });
-  });
-});
